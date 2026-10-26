@@ -34,9 +34,8 @@ async def lifespan(_: FastAPI):
             hashed_password = pwd_context.hash("1181mmss123456")
             new_admin = User(
                 email=admin_email,
-                password=hashed_password,
-                is_active=True,
-                is_superuser=True
+                password_hash=hashed_password,
+                role="admin"
             )
             db.add(new_admin)
             db.commit()
