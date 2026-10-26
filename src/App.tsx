@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { Link, Navigate, NavLink, Route, Routes } from 'react-router-dom';
 import { Activity, Bell, CalendarDays, ChevronDown, CircleHelp, ClipboardList, Coins, FolderOpen, Gauge, Menu, Package, Pencil, Plus, Search, Settings, Shirt, ShoppingBag, Users, X } from 'lucide-react';
 import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis, PieChart, Pie, Cell } from 'recharts';
-import { api, type Product } from './services/api';
+import { api, type Product, uploadImageToCloudinary } from './services/api';
 import { toProductSlug } from './utils/product';
 
 const monthLabels = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -118,11 +118,25 @@ function MeasurementForm({ productName, onClose, onSubmit }: { productName?: str
     neck: '',
     notes: ''
   });
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  let formToSubmit: any = { ...formData };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    onSubmit(formData);
-  };
+  // যদি ফর্মে কোনো ছবি বা ফাইল সিলেক্ট করা থাকে, তবে ক্লাউডনারিতে আপলোড হবে
+  if (formToSubmit.image_file && formToSubmit.image_file instanceof File) {
+    try {
+      const uploadedUrl = await uploadImageToCloudinary(formToSubmit.image_file);
+      formToSubmit.image_url = uploadedUrl; // স্থায়ী লিংক সেট হলো
+      delete formToSubmit.image_file;
+    } catch (error) {
+      console.error("Cloudinary upload error:", error);
+      alert("ছবি ক্লাউডে আপলোড করতে সমস্যা হয়েছে!");
+      return;
+    }
+  }
+
+  onSubmit(formToSubmit);
+};
 
   return (
     <div className="modal-backdrop" role="presentation">

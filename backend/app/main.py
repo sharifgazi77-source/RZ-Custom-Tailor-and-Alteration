@@ -15,13 +15,38 @@ from . import models
 from .models import Appointment, CustomerProfile, MediaAsset, Order, Product, StoreSettings, User
 from .schemas import DashboardOut, ProductInput, ProductOut, StoreSettingsInput
 from .security import create_token, require_admin, verify_password
-
+from passlib.context import CryptContext
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 @asynccontextmanager
 async def lifespan(_: FastAPI):
     # Alembic owns schema lifecycle; create_all is limited to lightweight local startup.
     if settings.database_url.startswith("sqlite"):
         Base.metadata.create_all(bind=engine)
+
+    # অ্যাডমিন ইউজার অটো-সিড করার কোড
+    try:
+        db = SessionLocal()
+        admin_email = "sharifgazi77@gmail.com"
+        existing_user = db.query(User).filter(User.email == admin_email).first()
+
+        if not existing_user:
+            hashed_password = pwd_context.hash("1181mmss123456")
+            new_admin = User(
+                email=admin_email,
+                hashed_password=hashed_password,
+                is_active=True,
+                is_superuser=True
+            )
+            db.add(new_admin)
+            db.commit()
+            print("Default admin user created successfully!")
+        else:
+            print("Admin user already exists.")
+        db.close()
+    except Exception as e:
+        print(f"Error creating default admin: {e}")
+
     yield
 
 
