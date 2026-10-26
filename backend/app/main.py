@@ -10,7 +10,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy import extract, func, select
 from sqlalchemy.orm import Session
-from .db import Base, engine, get_db, settings
+from .db import Base, engine, get_db, settings,SessionLocal
 from . import models
 from .models import Appointment, CustomerProfile, MediaAsset, Order, Product, StoreSettings, User
 from .schemas import DashboardOut, ProductInput, ProductOut, StoreSettingsInput
