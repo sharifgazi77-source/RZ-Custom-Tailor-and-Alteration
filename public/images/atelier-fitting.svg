@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">RZ tailor taking a customer's measurements</title>
+  <desc id="desc">A tailor carefully fits a measuring tape across a customer's suit in a warm, navy-and-gold atelier.</desc>
+  <defs>
+    <linearGradient id="wall" x2="1" y2="1"><stop stop-color="#172431"/><stop offset=".52" stop-color="#37302a"/><stop offset="1" stop-color="#090f15"/></linearGradient>
+    <linearGradient id="window" x2="0" y2="1"><stop stop-color="#c8a56b" stop-opacity=".48"/><stop offset="1" stop-color="#282721" stop-opacity=".08"/></linearGradient>
+    <linearGradient id="jacket" x2=".8" y2="1"><stop stop-color="#314864"/><stop offset=".48" stop-color="#172b43"/><stop offset="1" stop-color="#0c1929"/></linearGradient>
+    <linearGradient id="coat" x2="1" y2="1"><stop stop-color="#eee4d0"/><stop offset="1" stop-color="#b9aa91"/></linearGradient>
+    <radialGradient id="lamp"><stop stop-color="#f0cc83" stop-opacity=".65"/><stop offset="1" stop-color="#f0cc83" stop-opacity="0"/></radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="26"/></filter>
+  </defs>
+  <path fill="url(#wall)" d="M0 0h1200v820H0z"/>
+  <ellipse cx="762" cy="332" rx="410" ry="330" fill="url(#lamp)" filter="url(#soft)"/>
+  <path d="M55 70h338v400H55z" fill="url(#window)" stroke="#a78a58" stroke-opacity=".55" stroke-width="3"/>
+  <path d="M224 70v400M55 270h338" stroke="#d1b47d" stroke-opacity=".24" stroke-width="5"/>
+  <path d="M0 546h1200v274H0z" fill="#10171d" opacity=".82"/>
+  <path d="M0 590h1200" stroke="#ba9c66" stroke-opacity=".26" stroke-width="3"/>
+  <!-- garment rail and cloth bolts -->
+  <path d="M58 114h300M75 114v38m48-38v38m48-38v38m48-38v38m48-38v38m48-38v38" stroke="#d4bd91" stroke-opacity=".52" stroke-width="5"/>
+  <path d="M73 153h49l19 170-27 10-28-10zm48 0h51l16 193-31 8-35-8zm52 0h48l5 162-31 17-34-17zm48 0h51l-8 188-36 12-24-12zm53 0h49l-18 168-34 13-18-13z" fill="#0e1a29" stroke="#b79d6e" stroke-opacity=".32" stroke-width="3"/>
+  <path d="M278 161v163" stroke="#e0d2b8" stroke-opacity=".5" stroke-width="2"/>
+  <!-- tailor: head and shoulders -->
+  <path d="M221 151c0-62 36-101 87-101 51 0 78 39 74 93l-12 52-119 9z" fill="#a86f50"/>
+  <path d="M218 137c-2-71 43-111 96-107 50 4 78 40 71 89-20-24-48-40-75-43-30 29-58 41-92 44z" fill="#171719"/>
+  <path d="M249 204h95v72h-95z" fill="#9f684d"/>
+  <path d="M162 313c22-79 77-111 143-111 65 0 118 35 143 111l46 233H116z" fill="url(#coat)"/>
+  <path d="M274 222l39 81 38-81 54 23-57 126-35-32-34 32-61-126z" fill="#17253a"/>
+  <path d="M274 222l39 81-43 27-54-85zm77 0-38 81 42 27 52-85z" fill="#d5bd8d"/>
+  <path d="M214 343l81 54-58 114-101 7zm205 0-83 54 61 114 102 7z" fill="#1b2935"/>
+  <path d="M218 353l-56 83m259-83 53 83" stroke="#c3a36c" stroke-width="4"/>
+  <!-- customer wearing a tailored suit -->
+  <path d="M633 145c-4-70 35-116 91-116 54 0 91 42 85 110l-17 83H648z" fill="#bc805d"/>
+  <path d="M629 131c-10-66 34-116 96-116 58 0 91 44 84 94-34-7-63-29-76-56-29 39-62 58-104 78z" fill="#28201e"/>
+  <path d="M665 211h115v83H665z" fill="#ad7555"/>
+  <path d="M512 345c25-97 92-137 180-137 89 0 153 42 179 137l86 374H410z" fill="url(#jacket)"/>
+  <path d="M668 220l78 112 72-105 75 33-96 201-74-54-65 54-105-201z" fill="#f0eadf"/>
+  <path d="M670 220l76 112-68 50-86-119zm78 112 72-105 78 33-91 130z" fill="#1a2e49" stroke="#947a51" stroke-width="3"/>
+  <path d="M748 310l-18 28 20 30 21-30z" fill="#9b7a4c"/>
+  <path d="M748 368l-22 164 28 60 30-60-25-164" fill="#263c59"/>
+  <path d="M604 358l108 105-77 137-136 14zm285 0L785 463l74 137 140 14z" fill="#172b44" stroke="#c0a36f" stroke-opacity=".35" stroke-width="3"/>
+  <path d="M628 521h70m126 0h72" stroke="#d0b47b" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="749" cy="467" r="7" fill="#d2b479"/><circle cx="749" cy="510" r="7" fill="#d2b479"/>
+  <!-- tailor's hands, tape crossing the chest -->
+  <path d="M399 391c79-21 145-20 228 0l132 32" fill="none" stroke="#d8bd7c" stroke-width="10" stroke-linecap="round"/>
+  <path d="M400 391c82 23 216 39 355 31" fill="none" stroke="#f4dfab" stroke-width="4" stroke-dasharray="8 12"/>
+  <path d="M390 381c-22-11-39-4-43 12-5 18 18 33 43 31l34-14zm368 17c21-17 43-13 49 3 7 17-10 36-35 40l-35-12z" fill="#b67d5b"/>
+  <!-- scissors and folded fabric on the work table -->
+  <path d="M68 664h365" stroke="#aa8c59" stroke-width="4"/>
+  <path d="M130 665l43-35m-43 35 43 35m-43-35h97" fill="none" stroke="#d5c39f" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="126" cy="662" r="18" fill="none" stroke="#d5c39f" stroke-width="6"/><circle cx="126" cy="698" r="18" fill="none" stroke="#d5c39f" stroke-width="6"/>
+  <path d="M298 661h161l-31 63H272z" fill="#25374b" stroke="#a88c5e" stroke-width="3"/>
+  <path d="M0 777c230-31 422-21 613 7 190 27 383 24 587-10v46H0z" fill="#0a1118" opacity=".86"/>
+  <path d="M75 755h281" stroke="#c0a36f" stroke-width="2" opacity=".62"/>
+  <text x="78" y="743" fill="#e0c58b" font-family="Georgia,serif" font-size="21" letter-spacing="4">A FIT MADE FOR YOU</text>
+</svg>
